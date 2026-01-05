@@ -1,0 +1,67 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #A94442;
+    --secondary: #00ACAC;
+    --dark: #1A2229;
+    --light: #FFFFFF;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#FFFFFF] text-[#1A2229];
+  }
+}
+
+.event-card {
+  @apply relative overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+.event-card:hover .event-overlay {
+  @apply opacity-100;
+}
+
+.event-overlay {
+  @apply absolute inset-0 flex items-center justify-center bg-[#1A2229]/60 opacity-0 transition-opacity duration-300;
+}
+
+.category-badge {
+  @apply absolute top-4 right-4 rounded-full px-4 py-1 text-sm font-semibold;
+}
+
+.seminar { @apply bg-[#A94442] text-white; }
+.workshop { @apply bg-[#00ACAC] text-white; }
+.hackathon { @apply bg-[#1A2229] text-white; }
+.quiz { @apply bg-[#00ACAC] text-[#1A2229]; }
+.talkshow { @apply bg-[#A94442] text-white; }
+.bootcamp { @apply bg-[#1A2229] text-white; }
+
+/* Navigation Styles */
+.nav-link {
+  @apply rounded-md px-3 py-2 text-sm font-medium text-[#1A2229] transition-colors duration-200 hover:bg-[#00ACAC]/10;
+}
+
+.nav-button {
+  @apply inline-flex items-center justify-center rounded-md bg-[#A94442] px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#A94442]/90;
+}
+
+/* Footer Styles */
+.footer-link {
+  @apply text-[#FFFFFF] transition-colors duration-200 hover:text-[#00ACAC];
+}
+
+.footer-heading {
+  @apply mb-4 text-lg font-semibold text-[#FFFFFF];
+}
+
+.footer-section {
+  @apply space-y-2;
+}
